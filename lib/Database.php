@@ -1,10 +1,16 @@
 <?php
 
 class Database {
-    private $host = 'localhost';
-    private $user = 'root';
-    private $password = '';
-    private $dbname = 'job_list';
+    // private $host = 'localhost';
+    // private $user = 'root';
+    // private $password = '';
+    // private $dbname = 'job_list';
+
+    private $host = 'us-cdbr-east-03.cleardb.com';
+    private $user = 'bdfce401fd566d';
+    private $password = '992c6ead';
+    private $dbname = 'heroku_b8e48e4fcbc1a96';
+
     
     private $conn;
     private $error;
