@@ -1,10 +1,8 @@
 <?php
 require 'inc/header.php';?>
 
-
-
       <div class="jumbotron shadow p-3 mb-5 bg-white rounded">
-        <h3 style="text-align: left;"> Search for a job</h3>
+        <h3 class="pb-2" style="text-align: left;"> Search for a job</h3>
         <form action="index.php" method="GET" class="input-group">
           <select name="category" class="form-control" id="">
                 <option value="">Choose a category: ...</option>
@@ -18,7 +16,7 @@ require 'inc/header.php';?>
       </div>
       <br>
       <div>
-      <h2 id="latest-job" class="ps-2">Latest jobs </h2>
+      <h2 id="latest-job" class="ps-2"><?php echo $title; ?> </h2>
       <?php foreach($jobs as $job) { ?>
         <div class="row marketing">
           <div class="col-md-10">
@@ -27,15 +25,13 @@ require 'inc/header.php';?>
             <p><?php echo $job->description ?></p>
           </div>
           <div class ="col-md-2">
-          <a class="btn btn-primary" href="#">View</a> 
+          <a class="btn btn-primary" href="SingleJob.php?id=<?php echo $job->id; ?>">View</a> 
           </div>
         </div>
       <?php } ?>
       </div>
 
 
-
-
-    
+ 
 <?php require 'inc/footer.php'
 ?>

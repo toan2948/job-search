@@ -48,10 +48,6 @@ class Database {
         $this->stmt->bindValue($param, $value, $type);
     }
 }
-    // public function execute() {
-    //     return ;
-    // }
-
     public function resultSet(){
         $this->stmt->execute();
         return $this->stmt->fetchAll(PDO::FETCH_OBJ);

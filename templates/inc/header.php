@@ -23,9 +23,7 @@
                     <li class="nav-item">
                     <a class="nav-link" href="create.php">Create</a>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                    </li>
+            
                 </ul>
                 </nav>
             </div>

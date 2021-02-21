@@ -9,9 +9,11 @@ $template = new Template('templates/frontpage.php');
 
 $category = isset($_GET['category']) ? $_GET['category'] :null;
 
+
 $template->category = $category;
 
 if($category) {
+    $template->title = 'Search results';
     $template->jobs = $job->getJobsByCategory($category);
 } else {
     $template->title = 'Latest Job';

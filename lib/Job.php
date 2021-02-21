@@ -7,7 +7,7 @@
 
         // Get all jobs
         public function getAllJobs(){
-            $this->db->query("SELECT job.job_title, job.description, category.name AS category
+            $this->db->query("SELECT job.*, category.name AS category
                                 FROM job
                                 INNER JOIN category 
                                 ON job.category_id = category.id
@@ -32,6 +32,16 @@
             $results = $this->db->resultSet();
             return $results;
         }
+
+        // get a single-job
+        public function getJob($job_id) {
+            $query ="SELECT * FROM job WHERE id =".$job_id;
+            $this->db->query($query);
+            $result = $this->db->single();
+            return $result;
+        }
+
+
 
     }
 ?>
