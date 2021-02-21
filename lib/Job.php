@@ -6,7 +6,7 @@
         }
 
         // Get all jobs
-        public function gettAllJobs(){
+        public function getAllJobs(){
             $this->db->query("SELECT job.job_title, job.description, category.name AS category
                                 FROM job
                                 INNER JOIN category 
@@ -24,5 +24,14 @@
             $results = $this->db->resultSet();
             return $results;
         }
+
+        // get Jobs By Category
+        public function getJobsByCategory($category_id) {
+            $query ="SELECT * FROM job WHERE category_id =".$category_id. " ORDER BY post_date DESC";
+            $this->db->query($query);
+            $results = $this->db->resultSet();
+            return $results;
+        }
+
     }
 ?>

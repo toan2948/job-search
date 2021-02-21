@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+#brand {
+  font-family: "Lobster", cursive;
+  color: rgb(209, 136, 0);
+}
+
+#latest-job {
+  font-family: "Courgette", cursive;
+  color: darkturquoise;
+}
+
 /* Space out content a bit */
 body {
   padding-top: 1.5rem;

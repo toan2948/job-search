@@ -24,7 +24,7 @@
             chdir(dirname($this->template)); // change the current directory the directory 'template' 
             ob_start();
 
-            include basename($this->template); // = echo $title (if file is frontend.php)
+            include basename($this->template); // = output is  the content of file  frontend.php
             
             return ob_get_clean();
 
