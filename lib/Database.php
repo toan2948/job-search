@@ -1,24 +1,21 @@
 <?php
 
 class Database {
-    // private $host = 'localhost';
-    // private $user = 'root';
-    // private $password = '';
-    // private $dbname = 'job_list';
+    private $host = 'localhost';
+    private $user = 'root';
+    private $password = '';
+    private $dbname = 'job_list';
 
     // private $host = 'us-cdbr-east-03.cleardb.com';
     // private $user = 'bdfce401fd566d';
     // private $password = '992c6ead';
     // private $dbname = 'heroku_b8e48e4fcbc1a96';
   
-     private $host = 'eu-cdbr-west-03.cleardb.net';
-    private $user = 'bbeab981970278';
-    private $password = 'f5e0f7e4';
-    private $dbname = 'heroku_f58e244db07b167';
-    
-// Connect to DB
-// $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-    
+    // private $host = 'eu-cdbr-west-03.cleardb.net';
+    // private $user = 'bbeab981970278';
+    // private $password = 'f5e0f7e4';
+    // private $dbname = 'heroku_f58e244db07b167';
+        
     private $conn;
     private $error;
     private $stmt;
