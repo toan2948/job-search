@@ -1,30 +1,28 @@
 <?php
 
-// require_once 'config/init.php';
+require_once 'config/init.php';
 
-// $job = new Job;
-
-
-// $template = new Template('templates/frontpage.php');
-
-// $category = isset($_GET['category']) ? $_GET['category'] :null;
+$job = new Job;
 
 
-// $template->category = $category;
+$template = new Template('templates/frontpage.php');
 
-// if($category) {
-//     $template->title = 'Search results';
-//     $template->jobs = $job->getJobsByCategory($category);
-// } else {
-//     $template->title = 'Latest Job';
-//     $template->jobs = $job->getAllJobs();
-// }
+$category = isset($_GET['category']) ? $_GET['category'] :null;
 
-// $template->categories = $job->getCategories(); // transfer $categories to frontend.php
 
-// echo $template;
+$template->category = $category;
 
-echo 'hello';
+if($category) {
+    $template->title = 'Search results';
+    $template->jobs = $job->getJobsByCategory($category);
+} else {
+    $template->title = 'Latest Job';
+    $template->jobs = $job->getAllJobs();
+}
+
+$template->categories = $job->getCategories(); // transfer $categories to frontend.php
+
+echo $template;
  
 ?>
 
