@@ -1,11 +1,13 @@
 <?php
 
 class Database {
+    //localhost connection
     // private $host = 'localhost';
     // private $user = 'root';
     // private $password = '';
     // private $dbname = 'job_list';
 
+    //job-search app
     // private $host = 'us-cdbr-east-03.cleardb.com';
     // private $user = 'bdfce401fd566d';
     // private $password = '992c6ead';
