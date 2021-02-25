@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
 	$data['contact_email'] = $_POST['contact_email'];
 
 	if($job->create($data)){
-		redirect('index.php', 'Your job has been listed', 'success');
+		redirect('index.php', 'The new job has been listed', 'success');
 	} else {
 		redirect('index.php', 'Something went wrong', 'error');
 	}
@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
 $template = new Template('templates/job-create.php');
 
 
-$template->categories = $job->getCategories(); // transfer $categories to job-create.php
+$template->categories = $job->getCategories();
 
 
 echo $template;

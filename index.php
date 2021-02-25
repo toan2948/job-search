@@ -20,7 +20,7 @@ if($category) {
     $template->jobs = $job->getAllJobs();
 }
 
-$template->categories = $job->getCategories(); // transfer $categories to frontend.php
+$template->categories = $job->getCategories();
 
 echo $template;
  
