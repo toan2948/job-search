@@ -36,7 +36,7 @@ function displayMessage(){
 			//Create Output
 			if ($message_type == 'error') {
 				echo '<div class="alert alert-danger">' . $message . '</div>';
-			} else {
+			} else if ($message_type == 'success') {
 				echo '<div class="alert alert-success">' . $message . '</div>';
 			}
 		}
@@ -44,6 +44,6 @@ function displayMessage(){
 		unset($_SESSION['message'] );
 		unset($_SESSION['message_type'] );
 	} else {
-		echo 'no message';
+		echo '';
 	}
 }
