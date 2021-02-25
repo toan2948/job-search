@@ -1,6 +1,6 @@
 <?php require 'inc/header.php';?>
 
-    <h2 class="page-header">Create Job Listing</h2>
+    <h2 >Create a new job</h2>
     <br>
     <form method="post" action ="create.php">
         <div class="form-group">

@@ -42,7 +42,8 @@
         }
 
         //create a job
-        public function create($data){
+        // Create Job
+		public function create($data){
 			//Insert Query
 			$this->db->query("INSERT INTO job (category_id, job_title, company, description, location, salary, contact_user, contact_email)
 			VALUES (:category_id,:job_title, :company, :description, :location, :salary, :contact_user, :contact_email)");
