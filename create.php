@@ -4,15 +4,31 @@ require_once 'config/init.php';
 
 $job = new Job;
 
+if(isset($_POST['submit'])){
+	//Create Data Array
+	$data = array();
+	$data['job_title'] = $_POST['job_title'];
+	$data['company'] = $_POST['company'];
+	$data['category_id'] = $_POST['category'];
+	$data['description'] = $_POST['description'];
+	$data['location'] = $_POST['location'];
+	$data['salary'] = $_POST['salary'];
+	$data['contact_user'] = $_POST['contact_user'];
+	$data['contact_email'] = $_POST['contact_email'];
 
-$template = new Template('templates/job-page.php');
+	if($job->create($data)){
+		redirect('index.php', 'Your job has been listed', 'success');
+	} else {
+		redirect('index.php', 'Something went wrong', 'error');
+	}
+}
 
-$job_id = isset($_GET['id']) ? $_GET['id'] :null;
+
+$template = new Template('templates/job-create.php');
 
 
-$template->categories = $job->getCategories(); // transfer $categories to frontend.php
+$template->categories = $job->getCategories(); // transfer $categories to job-create.php
 
-$template->job = $job->getJob($job_id);
 
 echo $template;
  

@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
             <div class ="col-md-4">
-                <h1 id ="brand">JobList</h1>
+                <a id ="brand" href="index.php" class="h1 text-decoration-none">JobList</a>
             </div>
             <div class="header col-md-8">
                 <nav>

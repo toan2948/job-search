@@ -1,7 +1,6 @@
 <?php
 require 'inc/header.php';?>
 
-<a class="btn btn-primary" href="index.php">Back</a>
 <br> <br>
 <h3> <?php echo $job->job_title; ?> in <?php echo $job->location  ?></h3>
 <br>
@@ -13,12 +12,7 @@ require 'inc/header.php';?>
 <p class="fw-bold"> Contact </p>
 <p>Name: <?= $job->contact_user ?></p>
 <p>Email: <?= $job->contact_email ?></p>
-
-
-
-
-
-
-
+<a href="index.php">Go back</a>
+<br> <br>
 <?php require 'inc/footer.php'
 ?>

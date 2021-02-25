@@ -2,10 +2,10 @@
 
 class Database {
     //localhost connection
-    // private $host = 'localhost';
-    // private $user = 'root';
-    // private $password = '';
-    // private $dbname = 'job_list';
+    private $host = 'localhost';
+    private $user = 'root';
+    private $password = '';
+    private $dbname = 'job_list';
 
     //job-search app
     // private $host = 'us-cdbr-east-03.cleardb.com';
@@ -14,10 +14,10 @@ class Database {
     // private $dbname = 'heroku_b8e48e4fcbc1a96';
   
     // job-borse app
-    private $host = 'eu-cdbr-west-03.cleardb.net';
-    private $user = 'bbeab981970278';
-    private $password = 'f5e0f7e4';
-    private $dbname = 'heroku_f58e244db07b167';
+    // private $host = 'eu-cdbr-west-03.cleardb.net';
+    // private $user = 'bbeab981970278';
+    // private $password = 'f5e0f7e4';
+    // private $dbname = 'heroku_f58e244db07b167';
         
     private $conn;
     private $error;
@@ -61,13 +61,16 @@ class Database {
         $this->stmt->bindValue($param, $value, $type);
     }
 }
-    public function resultSet(){
+    public function execute(){
         $this->stmt->execute();
+    }
+    public function resultSet(){
+        $this->execute();
         return $this->stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function single(){
-        $this->stmt->execute();
+        $this->execute();
         return $this->stmt->fetch(PDO::FETCH_OBJ);
     }}
 

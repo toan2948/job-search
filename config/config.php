@@ -1,6 +1,0 @@
-<?php
-
-// DB paramater
-
-
-?>
